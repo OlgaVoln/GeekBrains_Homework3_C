@@ -8,7 +8,7 @@
 
 class Program
 {
-    static bool IsPalindrome(int number)
+    static bool Palindrome(int number)
     {
         string numberString = number.ToString();
         int length = numberString.Length;
@@ -27,7 +27,7 @@ class Program
     static void Main(string[] args)
     {
         Console.Write("Введите пятизначное число: ");
-        int number = int.Parse(Console.ReadLine());
+        int number = Convert.ToInt32(Console.ReadLine());
 
         if (number < 10000 || number > 99999)
         {
@@ -35,7 +35,7 @@ class Program
             return;
         }
 
-        if (IsPalindrome(number))
+        if (Palindrome(number))
         {
             Console.WriteLine("Число является палиндромом.");
         }
